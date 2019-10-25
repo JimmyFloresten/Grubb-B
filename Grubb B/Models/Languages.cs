@@ -8,6 +8,6 @@ namespace Grubb_B.Models
     public class Languages
     {
         public int Languages_Id { get; set; }
-        public string Languages { get; set; }
+        public string Language { get; set; }
     }
 }
