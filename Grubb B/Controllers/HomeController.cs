@@ -18,24 +18,26 @@ namespace Grubb_B.Controllers
 
         public ActionResult About()
         {
+            string stmt = "select * from freelancer;";
+
             try
             {
+
+                
+
+
                 using (var conn = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["dbConn"].ConnectionString))
                 {
-
                     conn.Open();
-                    using (var cmd = new NpgsqlCommand())
+                    using (var cmd = new NpgsqlCommand(stmt, conn))
                     {
                         cmd.Connection = conn;
-
-                        cmd.CommandText = "select * from freelancer;";
-
-                        cmd.ExecuteReader();
+                        int freelancer_id = (Int32)cmd.ExecuteScalar();
+                        ViewBag.Message = "Freelancer id: " + Convert.ToString(freelancer_id);
                     }
-                    conn.Close();
-
-
                 }
+
+                
             }
             catch (PostgresException ex)
             {
