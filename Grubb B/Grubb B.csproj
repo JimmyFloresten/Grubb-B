@@ -255,9 +255,25 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Competence.cs" />
+    <Compile Include="Models\Competence_category.cs" />
+    <Compile Include="Models\Core_abilities.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Education.cs" />
+    <Compile Include="Models\Freelancer.cs" />
+    <Compile Include="Models\Freelancer_Competence.cs" />
+    <Compile Include="Models\Freelancer_CoreAbilities.cs" />
+    <Compile Include="Models\Freelancer_Education.cs" />
+    <Compile Include="Models\Freelancer_Languages.cs" />
+    <Compile Include="Models\Freelancer_WorkHistory.cs" />
+    <Compile Include="Models\Languages.cs" />
+    <Compile Include="Models\Work_history.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -312,8 +328,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="Model2\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
